@@ -8,6 +8,8 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 # Install Gulp
 RUN npm install --global gulp-cli
 
+RUN sudo apt-get install liblttng-ust0
+
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
 # [Optional] Install zsh
